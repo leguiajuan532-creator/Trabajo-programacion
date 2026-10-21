@@ -1,0 +1,101 @@
+//Ejercicio 1: Suma de dos números
+import java.util.Scanner;
+
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        int numero1, numero2, suma;
+
+        System.out.print("Ingrese el primer numero: ");
+        numero1 = teclado.nextInt();
+
+        System.out.print("Ingrese el segundo numero: ");
+        numero2 = teclado.nextInt();
+
+        suma = numero1 + numero2;
+
+        System.out.println("La suma es: " + suma);
+
+        teclado.close();
+    }
+}
+
+
+//Ejercicio 2: Conversión de kilómetros a metros y centímetros
+import java.util.Scanner;
+
+public class Ejercicio2 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double kilometros, metros, centimetros;
+
+        System.out.print("Ingrese la distancia en kilometros: ");
+        kilometros = teclado.nextDouble();
+
+        metros = kilometros * 1000;
+        centimetros = kilometros * 100000;
+
+        System.out.println("Distancia en metros: " + metros);
+        System.out.println("Distancia en centimetros: " + centimetros);
+
+        teclado.close();
+    }
+}
+
+//Ejercicio 3: Cálculo de la distancia entre dos puntos
+import java.util.Scanner;
+
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double x1, y1, x2, y2, distancia;
+
+        System.out.print("Ingrese x1: ");
+        x1 = teclado.nextDouble();
+
+        System.out.print("Ingrese y1: ");
+        y1 = teclado.nextDouble();
+
+        System.out.print("Ingrese x2: ");
+        x2 = teclado.nextDouble();
+
+        System.out.print("Ingrese y2: ");
+        y2 = teclado.nextDouble();
+
+        distancia = Math.sqrt(
+            Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)
+        );
+
+        System.out.println("La distancia entre los puntos es: " + distancia);
+
+        teclado.close();
+    }
+}
+
+
+//Calculadora
+public class Calculadora {
+
+    // Metodo para sumar dos numeros
+    public void suma(float num1, float num2) {
+        float resultado = num1 + num2;
+        System.out.printf("La suma es: %.1f%n", resultado);
+    }
+
+    // Metodo para multiplicar dos numeros
+    public void producto(float num1, float num2) {
+        float resultado = num1 * num2;
+        System.out.printf("El producto es: %.1f%n", resultado);
+    }
+
+    // Metodo principal
+    public static void main(String[] args) {
+        Calculadora calculadora = new Calculadora();
+
+        calculadora.suma(5.0f, 3.0f);
+        calculadora.producto(5.0f, 3.0f);
+    }
+}
